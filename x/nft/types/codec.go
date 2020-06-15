@@ -2,6 +2,7 @@ package types
 
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/blockscapeLab/green/x/nft/exported"
 )
 
 // RegisterCodec registers concrete types on codec
@@ -18,6 +19,7 @@ func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterConcrete(MsgEditNFTMetadata{}, "nft/MsgEditNFTMetadata", nil)
 	cdc.RegisterConcrete(MsgMintNFT{}, "nft/MintNFT", nil)
 	cdc.RegisterConcrete(MsgBurnNFT{}, "nft/BurnNFT", nil)
+	cdc.RegisterInterface((*exported.NFT)(nil), nil)
 }
 
 // ModuleCdc defines the module codec
