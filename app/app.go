@@ -10,7 +10,6 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	nft "github.com/blockscapeLab/green/x/nft"
 	bam "github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/simapp"
@@ -26,6 +25,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/slashing"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	"github.com/cosmos/cosmos-sdk/x/supply"
+	nft "github.com/cosmos/modules/incubator/nft"
 )
 
 const appName = "GreenApp"
@@ -159,7 +159,7 @@ func NewInitApp(
 	app.subspaces[staking.ModuleName] = app.ParamsKeeper.Subspace(staking.DefaultParamspace)
 	app.subspaces[distr.ModuleName] = app.ParamsKeeper.Subspace(distr.DefaultParamspace)
 	app.subspaces[slashing.ModuleName] = app.ParamsKeeper.Subspace(slashing.DefaultParamspace)
-	app.subspaces[nft.ModuleName] = app.ParamsKeeper.Subspace(nft.DefaultParamspace)
+	app.subspaces[nft.ModuleName] = app.ParamsKeeper.Subspace("nft")
 
 	// The AccountKeeper handles address -> account lookups
 	app.AccountKeeper = auth.NewAccountKeeper(

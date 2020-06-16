@@ -3,10 +3,9 @@ module github.com/blockscapeLab/green
 go 1.13
 
 require (
-	github.com/blockscapeLab/green/x/nft v0.0.0-20191015123508-50d0c8092493
 	github.com/btcsuite/btcd v0.0.0-20190807005414-4063feeff79a // indirect
 	github.com/cosmos/cosmos-sdk v0.38.4
-	github.com/cosmos/modules/incubator/nft v0.0.0-20200616070437-c67759bd79c5 // indirect
+	github.com/cosmos/modules/incubator/nft v0.0.0-20200616070437-c67759bd79c5
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/onsi/gomega v1.5.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20190706150252-9beb055b7962 // indirect
@@ -18,7 +17,7 @@ require (
 	github.com/tendermint/tm-db v0.5.1
 )
 
-replace github.com/blockscapeLab/green/x/nft => /Users/vhahn/go/src/github.com/cosmos/modules/incubator/nft
+replace github.com/cosmos/modules/incubator/nft v0.0.0-20191015123508-50d0c8092493 => /Users/vhahn/go/src/github.com/cosmos/modules/incubator/nft
 
 // github.com/blockscapeLab/green/x/nft
 // github.com/cosmos/modules/incubator/nft v0.0.0-20191015123508-50d0c8092493
