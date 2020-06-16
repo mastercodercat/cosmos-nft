@@ -255,7 +255,7 @@ func NewInitApp(
 		// TODO: Add your module(s)
 		staking.NewAppModule(app.StakingKeeper, app.AccountKeeper, app.SupplyKeeper),
 		slashing.NewAppModule(app.SlashingKeeper, app.AccountKeeper, app.StakingKeeper),
-		nft.NewAppModule(app.NFTKeeper),
+		nft.NewAppModule(app.NFTKeeper, app.AccountKeeper),
 	)
 	// During begin block slashing happens after distr.BeginBlocker so that
 	// there is nothing left over in the validator fee pool, so as to keep the
