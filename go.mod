@@ -17,7 +17,4 @@ require (
 	github.com/tendermint/tm-db v0.5.1
 )
 
-replace github.com/cosmos/modules/incubator/nft v0.0.0-20191015123508-50d0c8092493 => /Users/vhahn/go/src/github.com/cosmos/modules/incubator/nft
-
-// github.com/blockscapeLab/green/x/nft
-// github.com/cosmos/modules/incubator/nft v0.0.0-20191015123508-50d0c8092493
+// replace github.com/cosmos/modules/incubator/nft v0.0.0-20191015123508-50d0c8092493 => /Users/vhahn/go/src/github.com/cosmos/modules/incubator/nft
