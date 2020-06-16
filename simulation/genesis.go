@@ -3,10 +3,10 @@ package simulation
 import (
 	"fmt"
 
-	"github.com/blockscapeLab/green/x/nft/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
+	"github.com/cosmos/modules/incubator/nft/types"
 )
 
 const (
