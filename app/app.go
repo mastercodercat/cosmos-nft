@@ -28,13 +28,13 @@ import (
 	nft "github.com/cosmos/modules/incubator/nft"
 )
 
-const appName = "GreenApp"
+const appName = "TestApp"
 
 var (
 	// DefaultCLIHome default home directories for the application CLI
-	DefaultCLIHome = os.ExpandEnv("$HOME/.greenCLI")
+	DefaultCLIHome = os.ExpandEnv("$HOME/.testCLI")
 	// DefaultNodeHome sets the folder where the applcation data and configuration will be stored
-	DefaultNodeHome = os.ExpandEnv("$HOME/.greenD")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.testD")
 
 	// ModuleBasics The module BasicManager is in charge of setting up basic,
 	// non-dependant module elements, such as codec registration
@@ -119,7 +119,7 @@ type NewApp struct {
 // verify app interface at compile time
 var _ simapp.App = (*NewApp)(nil)
 
-// NewgreenApp is a constructor function for greenApp
+// NewtestApp is a constructor function for testApp
 func NewInitApp(
 	logger log.Logger, db dbm.DB, traceStore io.Writer, loadLatest bool,
 	invCheckPeriod uint, baseAppOptions ...func(*bam.BaseApp),
